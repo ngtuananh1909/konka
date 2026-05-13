@@ -1,0 +1,15 @@
+{
+  "name": "among-the-code-v8",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test meeting-validation.regression.test.js server/deterministic.test.js",
+    "review-server": "node server/review-server.js",
+    "deterministic-server": "node server/deterministic/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "@google/generative-ai": "^0.24.1"
+  }
+}
