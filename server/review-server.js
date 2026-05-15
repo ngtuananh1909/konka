@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const { URL } = require('url');
+const { getProblemForFile } = require('./problems/python-problems');
+const { executeInDocker } = require('./deterministic/validation/docker-executor');
 
 const app = express();
 app.use(express.json({ limit: '2mb' }));

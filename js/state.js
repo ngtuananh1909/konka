@@ -102,7 +102,7 @@ const S = {
     currentMeetingReview: null,
     geminiReviewEnabled: false,
     geminiReviewError: '',
-    reviewApiBaseUrl: 'http://localhost:8787',
+    reviewApiBaseUrl: (typeof window !== 'undefined' && window.KONKA_REVIEW_API_BASE_URL) || 'http://localhost:8787',
 
     // Tổng hợp tasks đã hoàn thành từ tất cả players (broadcast qua network)
     allCompletedDevTasks: new Set(),   // Set<taskId>  — developer tasks

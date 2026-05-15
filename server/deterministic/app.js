@@ -8,7 +8,7 @@ function createApp() {
 
   app.use(express.json({ limit: '2mb' }));
   app.get('/health', (_req, res) => {
-    res.json({ ok: true, mode: 'deterministic', executor: 'docker-stub' });
+    res.json({ ok: true, mode: 'deterministic', executor: 'docker-runner' });
   });
   app.use('/api/rooms', createRoomsRouter(roomManager));
 
